@@ -3,4 +3,5 @@
     <string name="login_text">Inicio de sesión</string>
     <string name="login_cta_text">Button</string>
     <string name="android_icon_text">Android Icon</string>
+    <string name="login_cta_alternative_text">texto reemplazado</string>
 </resources>

@@ -28,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Button button = (Button) v;
                 Log.i("app-testing", "el click sobre el botón está funcionando");
+                button.setText(R.string.login_cta_alternative_text);
             }
         });
 
