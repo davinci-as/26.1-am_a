@@ -1,5 +1,6 @@
 package ar.edu.davinci.clasesam;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Button button = (Button) v;
                 Log.i("app-testing", "el click sobre el botón está funcionando");
-                button.setText(R.string.login_cta_alternative_text);
+                //button.setText(R.string.login_cta_alternative_text);
+                Intent intent = new Intent(getApplicationContext(), BlogActivity.class);
+                startActivity(intent);
             }
         });
 
