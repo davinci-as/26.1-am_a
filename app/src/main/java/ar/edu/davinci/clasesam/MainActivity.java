@@ -13,9 +13,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    public void sendMessage(View view){
-        Log.i("app-testing", "el click sobre la imagen está funcionando");
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,6 +1,8 @@
 package ar.edu.davinci.clasesam;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +11,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class BlogActivity extends AppCompatActivity {
+
+    public void sendMessage(View view){
+        Log.i("app-testing", "el click sobre la imagen está funcionando");
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
