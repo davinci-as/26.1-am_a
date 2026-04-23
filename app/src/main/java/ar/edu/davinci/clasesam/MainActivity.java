@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+    public static final  int BLOG_ID = 1;
 
 
     @Override
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("app-testing", "el click sobre el botón está funcionando");
                 //button.setText(R.string.login_cta_alternative_text);
                 Intent intent = new Intent(getApplicationContext(), BlogActivity.class);
+                intent.putExtra(getString(R.string.blog_id_key), BLOG_ID);
                 startActivity(intent);
             }
         });

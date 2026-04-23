@@ -1,5 +1,6 @@
 package ar.edu.davinci.clasesam;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,6 +20,13 @@ public class BlogActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Intent intent = getIntent();
+        if(intent.hasExtra("blog-id")) {
+            int blogId = intent.getIntExtra("blog-id", 0);
+            Log.i("app-testing", String.format("Está llegando el blogId: %d", blogId));
+        }
+
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_blog);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
