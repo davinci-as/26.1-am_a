@@ -14,7 +14,11 @@ import androidx.core.view.WindowInsetsCompat;
 public class BlogActivity extends AppCompatActivity {
 
     public void sendMessage(View view){
-        Log.i("app-testing", "el click sobre la imagen está funcionando");
+        Log.i("app-testing", "estamos volviendo a main activity");
+        Intent intent = new Intent();
+        intent.putExtra("blog-text", "testing blog content");
+        setResult(RESULT_OK, intent);
+        finish();
     }
 
     @Override

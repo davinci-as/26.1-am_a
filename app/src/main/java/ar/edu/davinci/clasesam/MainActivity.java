@@ -7,14 +7,25 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    public static final  int BLOG_ID = 1;
+    public final  int BLOG_ID = 1;
+    public final  int BLOG_DETAILS = 3;
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+        if(requestCode != BLOG_DETAILS) return;
+        if(resultCode != RESULT_OK) return;
+        if(!intent.hasExtra("blog-text")) return;
+
+        Log.i("app-testing", intent.getStringExtra("blog-text"));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 //button.setText(R.string.login_cta_alternative_text);
                 Intent intent = new Intent(getApplicationContext(), BlogActivity.class);
                 intent.putExtra(getString(R.string.blog_id_key), BLOG_ID);
-                startActivity(intent);
+                startActivityForResult(intent, BLOG_DETAILS);
             }
         });
 
