@@ -65,7 +65,8 @@ public class MainActivity extends AppCompatActivity {
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         if(networkInfo != null && networkInfo.isConnected()) {
-        (new ImageDownloader()).execute(getString(R.string.IMAGE_URL));
+        //(new ImageDownloader()).execute(getString(R.string.IMAGE_URL));
+            (new ApiRequest()).execute(getString(R.string.API_REQUEST_URL));
         } else {
             Log.i("network", "Sin conexión");
         }
