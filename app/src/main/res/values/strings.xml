@@ -8,4 +8,5 @@
     <string name="blog_id_key">blog-id</string>
     <string name="IMAGE_URL">https://skillforge.com/airo-assets/uploads/blog/292c4b8e6eb6ed3b4dcf47cc3c657d87.jpg</string>
     <string name="API_REQUEST_URL">https://rickandmortyapi.com/api/character</string>
+    <string name="login_title">Inicio de sesión</string>
 </resources>
